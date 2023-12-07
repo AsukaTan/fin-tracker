@@ -46,7 +46,7 @@ public class MainMenuGUI {
     private void createButtons() {
         JButton button1 = new JButton("Manipulate Expenses");
         JButton button2 = new JButton("Manipulate Investments");
-        JButton button3 = new JButton("Button 3");
+        JButton button3 = new JButton("Investment Performance Analysis");
         JButton button4 = new JButton("Button 4");
 
         Dimension buttonSize = new Dimension(1000, 200);
