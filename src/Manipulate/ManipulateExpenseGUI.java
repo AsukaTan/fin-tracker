@@ -5,8 +5,6 @@ import src.model.ExpenseEntry;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class ManipulateExpenseGUI implements Manipulate {
 
@@ -46,7 +44,7 @@ public class ManipulateExpenseGUI implements Manipulate {
 
     @Override
     public void createPanelAndComponents() {
-        panel = new JPanel(); // Use FlowLayout by default
+        panel = new JPanel();
         JButton addButton = new JButton("Add");
         JButton deleteButton = new JButton("Delete");
         amountField = new JTextField(10); // for expense amount
@@ -55,7 +53,7 @@ public class ManipulateExpenseGUI implements Manipulate {
         addButton.addActionListener(e -> addActionListener());
         deleteButton.addActionListener(e -> deleteActionListener());
 
-        JButton returnButton = new JButton("Return to src.Main");
+        JButton returnButton = new JButton("Return to Main");
         returnButton.addActionListener(e -> returnActionListener());
 
         panel.add(amountField);
@@ -95,8 +93,7 @@ public class ManipulateExpenseGUI implements Manipulate {
     }
 
     public void returnActionListener() {
-        frame.setVisible(false); // or frame.dispose();
-        // Optionally: bring MainGUI window back to focus or reinitialize it
+        frame.setVisible(false);
     }
 
     public void updateList() {

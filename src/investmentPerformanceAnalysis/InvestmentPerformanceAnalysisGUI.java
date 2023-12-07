@@ -18,6 +18,7 @@ public class InvestmentPerformanceAnalysisGUI {
         this.investmentEntry = investmentEntry;
         initializeFrame();
         addInvestmentTable();
+        addReturnButton();
     }
 
     private void initializeFrame() {
@@ -51,6 +52,14 @@ public class InvestmentPerformanceAnalysisGUI {
             sums.merge(type, amount, Double::sum);
         }
         return sums;
+    }
+
+    private void addReturnButton() {
+        JButton returnButton = new JButton("Return");
+        returnButton.addActionListener(e -> frame.dispose()); // Closes the current window
+        JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        buttonPanel.add(returnButton);
+        frame.add(buttonPanel, BorderLayout.SOUTH);
     }
 
     public void showGUI() {
