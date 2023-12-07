@@ -55,7 +55,7 @@ public class ManipulateInvestmentGUI implements Manipulate {
         addButton.addActionListener(e -> addActionListener());
         deleteButton.addActionListener(e -> deleteActionListener());
 
-        JButton returnButton = new JButton("Return to Main");
+        JButton returnButton = new JButton("Return to src.Main");
         returnButton.addActionListener(e -> returnActionListener());
 
         panel.add(amountField);

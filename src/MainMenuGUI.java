@@ -1,5 +1,8 @@
+package src;
+
 import src.Manipulate.ManipulateExpenseGUI;
 import src.Manipulate.ManipulateInvestmentGUI;
+import src.investmentPerformanceAnalysis.InvestmentPerformanceAnalysisGUI;
 import src.model.ExpenseEntry;
 import src.model.InvestmentEntry;
 
@@ -31,7 +34,7 @@ public class MainMenuGUI {
     }
 
     private void initializeFrame() {
-        frame = new JFrame("Main Menu");
+        frame = new JFrame("src.Main Menu");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(1000, 1000);
     }
@@ -72,7 +75,10 @@ public class MainMenuGUI {
         });
 
         JButton button3 = (JButton) panel.getComponent(2);
-        button3.addActionListener(e -> System.out.println("Button 3 clicked"));
+        button3.addActionListener(e -> {
+            InvestmentPerformanceAnalysisGUI investmentPerformanceAnalysisGUI = new InvestmentPerformanceAnalysisGUI(investmentEntry);
+            investmentPerformanceAnalysisGUI.showGUI();
+        });
 
         JButton button4 = (JButton) panel.getComponent(3);
         button4.addActionListener(e -> System.out.println("Button 4 clicked"));
