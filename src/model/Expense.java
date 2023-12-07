@@ -1,6 +1,8 @@
 package src.model;
 
-public class Expense {
+import java.io.Serializable;
+
+public class Expense implements Serializable {
     private int money;
     private String type;
 

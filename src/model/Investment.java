@@ -1,6 +1,8 @@
 package src.model;
 
-public class Investment {
+import java.io.Serializable;
+
+public class Investment implements Serializable{
     private int money;
     private String type;
 

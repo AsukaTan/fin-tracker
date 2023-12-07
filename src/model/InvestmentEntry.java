@@ -1,9 +1,10 @@
 package src.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class InvestmentEntry {
+public class InvestmentEntry implements Serializable{
     private List<Investment> investments;
 
     public InvestmentEntry() {
